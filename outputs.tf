@@ -14,3 +14,14 @@ output "server_name" {
   description = "(Required) Specifies the name of the MariaDB Server. Changing this forces a new resource to be created."
 
 }
+
+
+output "username" {
+  value       = azurerm_mariadb_server.main.administrator_login
+  description = "The administrator username of the MariaDB Server."
+}
+
+output "password" {
+  value       = random_password.administrator_password.result
+  description = "The administrator password of the MariaDB Server."
+}
