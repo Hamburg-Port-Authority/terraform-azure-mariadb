@@ -7,9 +7,9 @@ The module is used to deploy azure mariadb with a default setup (Infrastructure-
 # Example Use of Module:
 
     module "mariadb" {
-    source                          = "github.com/la-cc/terraform-azure-mariadb?ref=0.0.0"
+    source                          = "github.com/Hamburg-Port-Authority/terraform-azure-mariadb?ref=1.0.0"
 
-    resource_group_name             = module.resource_group.name
+    resource_group_name             = var.resource_group.name
     name                            = var.name
     tags                            = var.tags
 
